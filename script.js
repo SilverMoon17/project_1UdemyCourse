@@ -23,21 +23,21 @@ movies: {
 
 'use strict';
 
-let numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?");
+const numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
 
 const personalMovieDB = {
-    'count' : numberOfFilms,
-    'movies' : {},
-    'actors' : {},
-    'genres' : [],
-    'privat' : false
+    count : numberOfFilms,
+    movies : {},
+    actors : {},
+    genres : [],
+    privat : false
 };
 
 
 
 for (let i = 0; i < 2; i++) {
-    let lastMovieTitle = prompt("Один из последних просмотренных фильмов?");
-    let grade = prompt("На сколько вы его оцените?"); 
+    let lastMovieTitle = prompt("Один из последних просмотренных фильмов?", "");
+    let grade = prompt("На сколько вы его оцените?", ""); 
     personalMovieDB.movies[`${lastMovieTitle}`] = grade;
 }
 
